@@ -6,8 +6,10 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
+# Folders
 .venv
+.zed
+.pytest_cache
 
 # Stupid mac thing
 .DS_Store
