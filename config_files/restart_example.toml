@@ -1,0 +1,16 @@
+# Example restart configuration file
+# This shows how to restart a simulation from a saved state
+
+[settings]
+nSteps = 300  # Continue for 300 more steps
+tStart = 0.25 # Start time must match the time in the restart file
+tEnd = 0.75   # End time for the continued simulation
+
+[geometry]
+meshName = "bay.msh"
+borders = [[0.0, 0.75], [0.0, 0.2]] # define where fish are located
+
+[IO]
+logName = "restart_log"            # name of the log file created
+writeFrequency = 10                # Frequency of output video
+restartFile = "state_step_100.txt" # Path to the restart file to load from

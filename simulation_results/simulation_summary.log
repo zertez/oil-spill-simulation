@@ -1,0 +1,37 @@
+2025-08-31 22:00:53,696 - INFO - Simulation Parameters:
+2025-08-31 22:00:53,696 - INFO - [settings]
+2025-08-31 22:00:53,696 - INFO - nSteps = 500
+2025-08-31 22:00:53,696 - INFO - tStart = 0.1
+2025-08-31 22:00:53,696 - INFO - tEnd = 0.5
+2025-08-31 22:00:53,696 - INFO - [geometry]
+2025-08-31 22:00:53,696 - INFO - meshName = bay.msh
+2025-08-31 22:00:53,696 - INFO - borders = [[0.0, 0.75], [0.0, 0.2]]
+2025-08-31 22:00:53,696 - INFO - [IO]
+2025-08-31 22:00:53,696 - INFO - logName = log.mp4
+2025-08-31 22:00:53,696 - INFO - writeFrequency = 10
+2025-08-31 22:00:53,696 - INFO - restartFile = None
+2025-08-31 22:00:53,875 - INFO - Animation.save using <class 'matplotlib.animation.FFMpegWriter'>
+2025-08-31 22:00:53,875 - INFO - MovieWriter._run: running command: ffmpeg -f rawvideo -vcodec rawvideo -s 1280x960 -pix_fmt rgba -framerate 30 -loglevel error -i pipe: -vcodec h264 -pix_fmt yuv420p -b 1800k -metadata artist=Me -y ./simulation_results/log.mp4
+2025-08-31 22:00:55,792 - INFO - Time 0.1400: Oil in fishing grounds = 0.092086
+2025-08-31 22:00:57,765 - INFO - Time 0.1800: Oil in fishing grounds = 0.217127
+2025-08-31 22:00:59,738 - INFO - Time 0.2200: Oil in fishing grounds = 0.485147
+2025-08-31 22:01:01,798 - INFO - Time 0.2600: Oil in fishing grounds = 1.024417
+2025-08-31 22:01:03,788 - INFO - Time 0.3000: Oil in fishing grounds = 2.040812
+2025-08-31 22:01:05,766 - INFO - Time 0.3400: Oil in fishing grounds = 3.833674
+2025-08-31 22:01:07,738 - INFO - Time 0.3800: Oil in fishing grounds = 6.793028
+2025-08-31 22:01:09,716 - INFO - Time 0.4200: Oil in fishing grounds = 11.365136
+2025-08-31 22:01:11,735 - INFO - Time 0.4600: Oil in fishing grounds = 17.980127
+2025-08-31 22:01:13,751 - INFO - Time 0.5000: Oil in fishing grounds = 26.949252
+2025-08-31 22:01:13,930 - INFO - Final plot saved to ./simulation_results/final_oil_distribution.png
+2025-08-31 22:01:13,933 - INFO - Final state saved to ./simulation_results/final_simulation_state.txt
+2025-08-31 22:01:13,933 - INFO - ==================================================
+2025-08-31 22:01:13,933 - INFO - SIMULATION SUMMARY
+2025-08-31 22:01:13,933 - INFO - ==================================================
+2025-08-31 22:01:13,934 - INFO - Final simulation time: 0.5000
+2025-08-31 22:01:13,934 - INFO - Total oil in domain: 227.220428
+2025-08-31 22:01:13,934 - INFO - Final oil in fishing grounds: 27.153698
+2025-08-31 22:01:13,934 - INFO - Percentage in fishing grounds: 11.95%
+2025-08-31 22:01:13,934 - INFO - Total simulation steps: 500
+2025-08-31 22:01:13,934 - INFO - Time step size: 0.000800
+2025-08-31 22:01:13,934 - INFO - Simulation completed successfully
+2025-08-31 22:01:13,934 - INFO - ==================================================
