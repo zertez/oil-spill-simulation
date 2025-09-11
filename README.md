@@ -4,19 +4,19 @@
 
 A comprehensive finite volume method simulation for modeling oil spill dispersion in coastal waters, featuring advanced restart capabilities, real-time oil tracking, and extensive logging.
 
-## 🌊 Features
+## Features
 
-- ✅ **Finite Volume Method Implementation** - Accurate numerical simulation using flux calculations
-- ✅ **TOML Configuration System** - Flexible parameter management with validation
-- ✅ **Video Animation Generation** - Create MP4 animations of oil dispersion over time
-- ✅ **Text File State Management** - Save and restart simulations from any point
-- ✅ **Fishing Ground Monitoring** - Real-time tracking of oil amounts in specified areas
-- ✅ **Multiple Simulation Support** - Batch processing of configuration files
-- ✅ **Comprehensive Logging** - Detailed simulation summaries and parameter tracking
-- ✅ **Command Line Interface** - Easy-to-use CLI with flexible options
-- ✅ **Robust Testing Suite** - Comprehensive test coverage for all components
+- **Finite Volume Method Implementation** - Accurate numerical simulation using flux calculations
+- **TOML Configuration System** - Flexible parameter management with validation
+- **Video Animation Generation** - Create MP4 animations of oil dispersion over time
+- **Text File State Management** - Save and restart simulations from any point
+- **Fishing Ground Monitoring** - Real-time tracking of oil amounts in specified areas
+- **Multiple Simulation Support** - Batch processing of configuration files
+- **Comprehensive Logging** - Detailed simulation summaries and parameter tracking
+- **Command Line Interface** - Easy-to-use CLI with flexible options
+- **Robust Testing Suite** - Comprehensive test coverage for all components
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -50,7 +50,7 @@ Run multiple simulations from a directory:
 python -m src.oil_spill_sim.main --config-dir config_files/
 ```
 
-## 📋 Configuration
+## Configuration
 
 ### TOML Configuration Structure
 
@@ -74,16 +74,16 @@ restartFile = ""                           # Path to restart file (optional)
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `nSteps` | integer | ✅ | Number of simulation time steps |
+| `nSteps` | integer | Number of simulation time steps |
 | `tStart` | float | ❌ | Start time (default: 0.0) |
-| `tEnd` | float | ✅ | End time of simulation |
-| `meshName` | string | ✅ | Path to mesh file (.msh format) |
-| `borders` | array | ✅ | Fishing ground boundaries as [[x_min, x_max], [y_min, y_max]] |
+| `tEnd` | float | End time of simulation |
+| `meshName` | string | Path to mesh file (.msh format) |
+| `borders` | array | Fishing ground boundaries as [[x_min, x_max], [y_min, y_max]] |
 | `logName` | string | ❌ | Log file prefix (default: "logfile") |
 | `writeFrequency` | integer | ❌ | Video output frequency (frames per step) |
 | `restartFile` | string | ❌ | Path to restart state file |
 
-## 🔄 Restart Functionality
+## Restart Functionality
 
 The simulation supports saving and loading states for continuation:
 
@@ -107,7 +107,7 @@ restartFile = "state_step_100.txt"  # Path to saved state
 
 **Important:** When using `restartFile`, you must provide `tStart > 0` matching the saved time.
 
-## 📊 Oil Tracking & Logging
+## Oil Tracking & Logging
 
 ### Fishing Ground Monitoring
 The simulation tracks oil amounts within specified fishing grounds:
@@ -140,7 +140,7 @@ Time 0.2000: Oil in fishing grounds = 0.156789
 ...
 ```
 
-## 🔧 Command Line Options
+## Command Line Options
 
 ```bash
 python -m src.oil_spill_sim.main [OPTIONS]
@@ -168,29 +168,13 @@ python -m src.oil_spill_sim.main --config-dir batch_configs/
 python -m src.oil_spill_sim.main --config-file sim.toml --output-dir my_results/
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-oil_spill_sim/
-├── src/oil_spill_sim/         # Main source code
-│   ├── __init__.py
-│   ├── main.py                # CLI entry point
-│   ├── simulation.py          # Core simulation logic
-│   ├── mesh.py                # Mesh handling
-│   ├── geometry.py            # Geometric calculations
-│   ├── config.py              # Configuration management
-│   └── visualization.py       # Animation and plotting
-├── test_files/                # Test suite
-├── config_files/              # Example configurations
-├── data/                      # Input data files
-├── results/                   # Simulation outputs
-├── docs/                      # Documentation
-├── input.toml                 # Default configuration
-├── bay.msh                    # Default mesh file
-└── README.md                  # This file
+
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite:
 
@@ -201,7 +185,7 @@ python test_files/test_mesh.py
 python test_files/test_simulation.py
 ```
 
-## 📈 Output Files
+## Output Files
 
 ### Generated Files
 - **Video Animation**: `{config_name}.mp4` - Visual simulation of oil dispersion
@@ -218,7 +202,7 @@ python test_files/test_simulation.py
 ...
 ```
 
-## 🔬 Mathematical Model
+## Mathematical Model
 
 The simulation implements the finite volume method for the advection equation:
 
@@ -231,7 +215,7 @@ Where:
 - `v⃗(x⃗) = (y - 0.2x, -x)` = velocity field
 - Initial condition: `u(0,x⃗) = exp(-||x⃗ - x⃗ₖ||²/0.01)` with x⃗ₖ = (0.35, 0.45)
 
-## 🎯 Academic Context
+## Academic Context
 
 This project was developed for **INF203** at NMBU (Norwegian University of Life Sciences) in June 2024. It demonstrates:
 
@@ -241,7 +225,7 @@ This project was developed for **INF203** at NMBU (Norwegian University of Life 
 - Scientific computing and visualization
 - Configuration management and testing
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -269,11 +253,11 @@ Enable detailed logging by modifying the logging level in `main.py`:
 logging.basicConfig(level=logging.DEBUG, ...)
 ```
 
-## 📄 License
+## License
 
 This project is developed for educational purposes as part of university coursework.
 
-## 👥 Authors
+## Authors
 
 - Marcus Dalaker Figenschou - NMBU INF203 Student
 
