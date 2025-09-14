@@ -11,5 +11,13 @@ wheels/
 .zed
 .pytest_cache
 
+# Generated results and outputs
+simulation_results/
+results/
+*.mp4
+*.txt
+*.png
+*.log
+
 # Stupid mac thing
 .DS_Store

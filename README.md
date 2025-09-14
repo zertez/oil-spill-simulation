@@ -260,6 +260,7 @@ This project is developed for educational purposes as part of university coursew
 ## Authors
 
 - Marcus Dalaker Figenschou - NMBU INF203 Student
+- Sindri Thorsteinsson - NMBU INF203 Student
 
 ---
 
