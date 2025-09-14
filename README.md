@@ -4,6 +4,11 @@ A finite volume method simulation for modeling oil spill dispersion in coastal w
 
 *INF203 Project - NMBU, June 2024*
 
+## Authors
+
+- Marcus Dalaker Figenschou - NMBU Student
+- Sindri Thorsteinsson - NMBU Student
+
 ## Overview
 
 This project simulates oil dispersion in coastal waters using the finite volume method to solve the advection equation. It features configurable parameters, visual animations, and real-time monitoring of oil concentration in fishing grounds.
@@ -149,40 +154,6 @@ python test_files/test_mesh.py
 python test_files/test_simulation.py
 ```
 
-## Standalone Distribution
-
-Create a portable executable package:
-
-### Using Python Zipapp
-```bash
-# Create a .pyz file (requires Python installed on target system)
-python -m zipapp oil_spill_sim -p "/usr/bin/env python3" \
-    -m "src.oil_spill_simulation.main:main" -o oil_spill_sim.pyz
-
-# Run the standalone package
-python oil_spill_sim.pyz --config-file config.toml
-```
-
-### Using PyInstaller (Fully Self-Contained)
-```bash
-# Install PyInstaller
-uv pip install pyinstaller
-
-# Create single executable (includes Python runtime)
-pyinstaller --onefile --name oil_spill_sim \
-    --add-data "data/meshes/*.msh:data/meshes" \
-    src/oil_spill_simulation/main.py
-
-# Find executable in dist/oil_spill_sim
-```
-
-### Using UV Bundle
-```bash
-# Build and bundle with UV (experimental)
-uv build
-uv bundle --python 3.13 --output oil_spill_sim_standalone
-```
-
 ## Development
 
 ```bash
@@ -200,11 +171,6 @@ uv run pytest test_files/
 - **Mesh Format**: Gmsh (.msh) triangular elements
 - **Visualization**: Matplotlib for animations and plots
 - **Configuration**: TOML with validation and error handling
-
-## Authors
-
-- Marcus Dalaker Figenschou - NMBU Student
-- Sindri Thorsteinsson - NMBU Student
 
 ## License
 
