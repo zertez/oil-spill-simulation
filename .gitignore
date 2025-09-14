@@ -16,7 +16,6 @@ simulation_results/
 results/
 *.mp4
 *.txt
-*.png
 *.log
 
 # Stupid mac thing

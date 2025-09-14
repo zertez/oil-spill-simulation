@@ -4,6 +4,21 @@ A finite volume method simulation for modeling oil spill dispersion in coastal w
 
 *INF203 Project - NMBU, June 2024*
 
+## Visual Demonstration
+
+<div align="center">
+
+### Initial Oil Spill (t=0)
+![Initial State](docs/images/Oil_Time_0.png)
+
+### Oil Dispersion Animation
+![Simulation GIF](docs/images/log.gif)
+
+### Final Distribution (t=0.5)
+![Final State](docs/images/final_oil_distribution.png)
+
+</div>
+
 ## Authors
 
 - Marcus Dalaker Figenschou - NMBU Student
