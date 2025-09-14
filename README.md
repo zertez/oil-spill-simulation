@@ -17,8 +17,26 @@ This project simulates oil dispersion in coastal waters using the finite volume 
 - **Fishing Ground Monitoring** with real-time oil tracking
 - **Comprehensive Testing** with full test coverage
 
-## Installation
+## Prerequisites
 
+- Python 3.13+
+- UV package manager (recommended) or pip
+
+### Using UV (Recommended)
+```bash
+# Install UV if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Clone repository
+git clone <repository-url>
+cd oil_spill_sim
+
+# Install dependencies and package with UV
+uv sync
+uv pip install -e .
+```
+
+### Using pip (Alternative)
 ```bash
 # Clone repository
 git clone <repository-url>
@@ -129,6 +147,50 @@ python test_files/test_save_load.py
 python test_files/test_geometry.py
 python test_files/test_mesh.py
 python test_files/test_simulation.py
+```
+
+## Standalone Distribution
+
+Create a portable executable package:
+
+### Using Python Zipapp
+```bash
+# Create a .pyz file (requires Python installed on target system)
+python -m zipapp oil_spill_sim -p "/usr/bin/env python3" \
+    -m "src.oil_spill_simulation.main:main" -o oil_spill_sim.pyz
+
+# Run the standalone package
+python oil_spill_sim.pyz --config-file config.toml
+```
+
+### Using PyInstaller (Fully Self-Contained)
+```bash
+# Install PyInstaller
+uv pip install pyinstaller
+
+# Create single executable (includes Python runtime)
+pyinstaller --onefile --name oil_spill_sim \
+    --add-data "data/meshes/*.msh:data/meshes" \
+    src/oil_spill_simulation/main.py
+
+# Find executable in dist/oil_spill_sim
+```
+
+### Using UV Bundle
+```bash
+# Build and bundle with UV (experimental)
+uv build
+uv bundle --python 3.13 --output oil_spill_sim_standalone
+```
+
+## Development
+
+```bash
+# Run with UV
+uv run python -m src.oil_spill_sim.main
+
+# Run tests with UV
+uv run pytest test_files/
 ```
 
 ## Technical Details
