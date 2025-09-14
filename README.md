@@ -4,9 +4,9 @@ A finite volume method simulation for modeling oil spill dispersion in coastal w
 
 *INF203 Project - NMBU, June 2024*
 
-## Oil Dispersion Animation
+## Visual Demonstration
 
-<div align="center">
+Oil Dispersion Animation
 ![Simulation GIF](docs/images/log.gif)
 
 </div>
