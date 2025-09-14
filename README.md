@@ -6,8 +6,10 @@ A finite volume method simulation for modeling oil spill dispersion in coastal w
 
 ## Visual Demonstration
 
-Oil Dispersion Animation
-![Simulation GIF](docs/images/log.gif)
+<div align="center">
+
+### Oil Dispersion Animation
+![Simulation GIF](docs/images/simulation.gif)
 
 </div>
 
